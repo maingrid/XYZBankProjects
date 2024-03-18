@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import pages.AccountPage;
 import pages.CustomerPage;
 import pages.MainPage;
 import pages.ManagerPage;
@@ -16,6 +17,7 @@ public class BaseTest {
     MainPage mainPage;
     CustomerPage customerPage;
     ManagerPage managerPage;
+    AccountPage accountPage;
     public static void baseStartConfig() {
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
@@ -29,6 +31,7 @@ public class BaseTest {
         mainPage = page();
         customerPage = page();
         managerPage = page();
+        accountPage = page();
     }
 
     @AfterEach
