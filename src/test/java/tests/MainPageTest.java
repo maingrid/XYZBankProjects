@@ -3,7 +3,7 @@ package tests;
 import base.BaseTest;
 import flow.CustomerPageFlow;
 import flow.MainPageFlow;
-import flow.ManagerFlow;
+import flow.ManagerPageFlow;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -20,16 +20,16 @@ public class MainPageTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка перехода на страницу клиенты")
-    public void checkGoToPageCustomers(){
+    public void checkGoToPageCustomers() {
         MainPageFlow.clickButtonCustomerLogin();
         assertTrue(CustomerPageFlow.customersList.isEnabled());
     }
 
     @Test
     @DisplayName("Проверка перехода на страницу менеджера")
-    public void checkGoToPageManager(){
+    public void checkGoToPageManager() {
         MainPageFlow.clickButtonManagerLogin();
-        assertTrue(ManagerFlow.addCustomerButton.isEnabled());
+        assertTrue(ManagerPageFlow.addCustomerButton.isEnabled());
         System.out.println("test");
     }
 
